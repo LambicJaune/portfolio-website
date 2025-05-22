@@ -24,7 +24,7 @@ body {
     background-color: #f7f2e3;
     font-family: 'archivo narrow', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: normal;
 }
 
@@ -109,7 +109,7 @@ button:focus {
 
 .profile__portrait {
     float: left;
-    width: 250px;
+    width: 280px;
     margin-right: 40px;
     border-radius: 50%;
     -webkit-transition-duration: 0.6s;
@@ -135,7 +135,7 @@ button:focus {
 }
 
 .profile {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
