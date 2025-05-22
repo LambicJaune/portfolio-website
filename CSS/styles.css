@@ -28,13 +28,13 @@ Background-color (sand beige): #fbe9d0
     --bright-sun-svg: #edc655;
     --hot-sun-svg: #ee6210;
     --ground-berlin-svg: #28292a;
-    --body-font-size: 20px;
-    --body-font-weight: 400;
+    --body-font-size: 22px;
+    --body-font-weight: 200;
 }
 
 body {
     background-color: var(--background-color);
-    font-family: 'archivo narrow', sans-serif;
+    font-family: 'bebas neue', sans-serif;
     font-weight: var(--body-font-weight);
     font-size: var(--body-font-size);
     line-height: normal;
@@ -123,7 +123,7 @@ button:focus {
 
 .profile__portrait {
     float: left;
-    width: 280px;
+    width: 300px;
     margin-right: 40px;
     border-radius: 50%;
     transition-duration: 0.6s;
@@ -183,7 +183,6 @@ button:focus {
     display: flex;
     width: 100%;
     padding: 20px;
-    border-bottom: 1px solid var(--primary-color);
     margin-bottom: 100px;
 }
 
