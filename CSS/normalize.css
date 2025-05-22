@@ -10,8 +10,10 @@
 
 html {
   line-height: 1.15;
+
   /* 1 */
   -webkit-text-size-adjust: 100%;
+
   /* 2 */
 }
 
@@ -54,6 +56,7 @@ h1 {
 
 hr {
   box-sizing: content-box;
+
   /* 1 */
   height: 0;
   /* 1 */
@@ -214,7 +217,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+    -webkit-appearance: button;
 }
 
 /**
