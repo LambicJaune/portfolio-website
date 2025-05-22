@@ -248,6 +248,10 @@ button:focus {
         cursor: pointer;
     }
 
+    .grid__item-content {
+        text-align: center;
+    }
+
     .overlay {
         position: absolute;
         top: 0;
