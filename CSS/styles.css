@@ -1,11 +1,12 @@
 /*
 colors used
 
-Text Color (black): #000;
-Primary Color (rust): #b7410e;
-Secondary Color (orange): #ff812d;
+Text Color (black): #544855;
+Primary Color (bight orange): #e13200;
+Secondary Color (brown): #693d33;
+Secondary Buttons Color (grey blue): #90aead;
 
-Background-color (very pale yellow): #f7f2e3
+Background-color (sand beige): #fbe9d0
 */
 
 * {
@@ -13,18 +14,19 @@ Background-color (very pale yellow): #f7f2e3
 }
 
 :root {
-    --primary-color: #b7410e;
-    --secondary-color: #ff812d;
-    --secondary-buttons: #c48e29;
-    --text-color: #000;
+    --primary-color: #cb2c00;
+    --secondary-color: #693d33;
+    --secondary-buttons: #90aead;
+    --text-color: #174351;
     --text-color-darker-backgrounds: #fff;
     --bright-grey: #757575;
     --border-bottom-buttons: rgba(0, 0, 0, 0.3);
     --button-focus-border: #000;
-    --background-color: #f7f2e3;
+    --background-color: #fbe9d0;
     --grid-items-bg-color: #b3b3b3;
     --page-header-bottom: rgba(183, 65, 14, 0.224);
     --bright-sun-svg: #edc655;
+    --hot-sun-svg: #ee6210;
     --ground-berlin-svg: #28292a;
     --body-font-size: 20px;
     --body-font-weight: 400;
@@ -60,8 +62,10 @@ a {
 
 a:visited {
     color: var(--secondary-color);
+}
 
-    /* changes the link text color to orange when visited */
+.navigation-list__item:visited {
+    color: var(--primary-color);
 }
 
 a:hover,
@@ -179,7 +183,7 @@ button:focus {
     display: flex;
     width: 100%;
     padding: 20px;
-    border-bottom: 1px solid var(--page-header-bottom);
+    border-bottom: 1px solid var(--primary-color);
     margin-bottom: 100px;
 }
 
@@ -303,7 +307,7 @@ button:focus,
     }
 
     50% {
-        fill: var(--primary-color);
+        fill: var(--hot-sun-svg);
     }
 
     100% {
