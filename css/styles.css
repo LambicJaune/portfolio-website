@@ -261,7 +261,7 @@ button:active,
         place-items: center;
         position: relative;
         overflow: hidden;
-        transition: transform 0.3 ease;
+        transition: transform 0.3s ease;
     }
 
     .grid__item:hover {
