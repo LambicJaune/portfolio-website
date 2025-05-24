@@ -313,8 +313,8 @@ button:active {
         overflow: hidden;
         -webkit-transition: -webkit-transform 0.3 ease;
         transition: -webkit-transform 0.3 ease;
-        transition: transform 0.3 ease;
-        transition: transform 0.3 ease, -webkit-transform 0.3 ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3 ease;
     }
 
     .grid__item:hover {
