@@ -105,6 +105,7 @@ button {
 }
 
 button:focus {
+    outline: none;
     border: 1px solid var(--button-focus-border);
 }
 
@@ -185,10 +186,19 @@ button:active,
     margin: 0 auto;
 }
 
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .table-container {
-    max-width: 1000px;
-    margin: 0 auto;
     text-align: center;
+}
+
+.about-grid-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 
 #contact-form form {
@@ -397,3 +407,8 @@ button:active,
     }
 }
 
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

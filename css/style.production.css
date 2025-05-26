@@ -101,6 +101,7 @@ button {
 }
 
 button:focus {
+    outline: none;
     border: 1px solid #000;
 }
 
@@ -222,10 +223,21 @@ button:active {
     margin: 0 auto;
 }
 
+.about-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .table-container {
-    max-width: 1000px;
-    margin: 0 auto;
     text-align: center;
+}
+
+.about-grid-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 
 #contact-form form {
@@ -311,10 +323,10 @@ button:active {
         place-items: center;
         position: relative;
         overflow: hidden;
-        -webkit-transition: -webkit-transform 0.3 ease;
-        transition: -webkit-transform 0.3 ease;
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
         transition: transform 0.3s ease;
-        transition: transform 0.3s ease, -webkit-transform 0.3 ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
     }
 
     .grid__item:hover {
@@ -523,5 +535,12 @@ button:active {
 
     h1 {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 }
