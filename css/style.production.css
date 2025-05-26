@@ -619,3 +619,15 @@ button:active {
         font-size: 30px;
     }
 }
+
+@media (max-width: 665px) {
+    #contact-form {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 665px) {
+    #svg1 {
+        max-width: 90%;
+    }
+}
