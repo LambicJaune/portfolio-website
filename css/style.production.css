@@ -223,6 +223,10 @@ button:active {
     margin: 0 auto;
 }
 
+.content-container {
+    margin: 0 20px;
+}
+
 .about-grid {
     display: -ms-grid;
     display: grid;
@@ -557,7 +561,7 @@ button:active {
         -ms-flex-direction: column;
         flex-direction: column;
         text-align: center;
-        margin: 0 auto;
+        margin: 0 20px;
     }
 }
 
