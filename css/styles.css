@@ -469,6 +469,7 @@ button:active,
     .navigation-list li {
         margin: 0 15px;
         font-size: 30px;
+        text-align: center;
     }
 }
 
