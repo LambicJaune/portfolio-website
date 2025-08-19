@@ -407,9 +407,22 @@ button:active {
         padding: 1rem;
     }
 
+
+    /* Force overlay text color to stay consistent in all link states */
+    .grid__item a.overlay-link h1,
+    .grid__item a.overlay-link:link h1,
+    .grid__item a.overlay-link:visited h1,
+    .grid__item a.overlay-link:hover h1,
+    .grid__item a.overlay-link:focus h1,
+    .grid__item a.overlay-link:active h1 {
+        color: var(--text-color-darker-backgrounds);
+        margin: 0;
+    }
+
+
     .grid__item:hover .overlay {
         opacity: 0.9;
-        pointer-events: auto; 
+        pointer-events: auto;
     }
 
     .grid__item:last-child {
@@ -606,6 +619,7 @@ button:active {
 }
 
 @media (max-width: 665px) {
+
     .button,
     .button__secondary {
         margin: 10px auto;
@@ -663,6 +677,7 @@ button:active {
         margin: 0 20px;
     }
 }
+
 @media (max-width: 665px) {
     .input-wrapper {
         flex-direction: column;
@@ -681,6 +696,7 @@ button:active {
         flex: none;
     }
 }
+
 @media (max-width: 665px) {
     #svg1 {
         max-width: 90%;

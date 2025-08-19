@@ -375,6 +375,20 @@ button:active {
         padding: 1rem;
     }
 
+
+    /* Force text color to remain the same on all link states */
+    .grid__item a.overlay-link h1 {
+        color: var(--text-color-darker-backgrounds);
+        margin: 0;
+    }
+
+    /* Optional: disable hover color changes */
+    .grid__item a.overlay-link:hover h1,
+    .grid__item a.overlay-link:focus h1,
+    .grid__item a.overlay-link:active h1 {
+        color: var(--text-color-darker-backgrounds);
+    }
+
     .grid__item:hover .overlay {
         opacity: 0.9;
         pointer-events: auto;
@@ -574,6 +588,7 @@ button:active {
 }
 
 @media (max-width: 665px) {
+
     .button,
     .button__secondary {
         margin: 10px auto;

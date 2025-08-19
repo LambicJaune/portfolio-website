@@ -310,6 +310,17 @@ button:active,
         padding: 1rem;
     }
 
+    .overlay h1 {
+    color: var(--text-color-darker-backgrounds);
+}
+
+.overlay-link:hover h1,
+.overlay-link:focus h1,
+.overlay-link:active h1 {
+    color: var(--text-color-darker-backgrounds); /* prevent color change */
+}
+
+
     .grid__item:hover .overlay {
         opacity: 0.9;
         pointer-events: auto; 
