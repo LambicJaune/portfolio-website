@@ -332,6 +332,27 @@ button:active,
     }
 }
 
+.image-stack {
+    display: flex;
+    flex-wrap: wrap;         /* Allows wrapping on smaller screens */
+    gap: 2rem;               /* Space between images */
+    justify-content: center; /* Centers images horizontally */
+}
+
+.image-stack img {
+    max-width: 100%;         /* Responsive */
+    height: auto;
+    display: block;
+    flex: 1 1 calc(50% - 2rem); /* Two images per row on desktop, accounting for gap */
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+    .image-stack img {
+        flex: 1 1 100%;      /* Full width on small screens */
+    }
+}
+
 @keyframes sun-color-change {
     0% {
         fill: var(--bright-sun-svg);

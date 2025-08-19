@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Meet App</title>
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Cal+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Condensed+One&family=Tagesschrift&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <img src="./img/logo-gael-giraud.png" width="130" height="104" class="page-header__item"
+            alt="logo of the name gael giraud in black, cursive letters">
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="this-is-me.html" role="menuitem" class="navigation-list__item"
+                        aria-label="About Gael Giraud">This is me</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a href="get-in-touch.html" role="menuitem" class="navigation-list__item">Get in touch</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0;">
+            <h1>THE MEET APP</h1>
+
+            <div class="image-stack">
+                <img src="./img/meet-app-1.jpg" alt="first screenshot of the Meet App">
+                <img src="./img/meet-app-2.jpg" alt="second screenshot of the Meet App">
+            </div>
+
+            <h2>Objective</h2>
+            <p>To create a user-friendly event planner that sources events from the Google Calendar API, allowing event
+                filtering by city and number, and to visualize data interactively. The app is fully responsive and
+                supports offline functionality.</p>
+
+            <h2>Key features:</h2>
+            </p>
+            <p>- Google Calendar OAuth integration.</p>
+            <p>- Dynamic event list based on city and number of events.</p>
+            <p>- Offline support via service workers.</p>
+            <p>- LocalStorage caching of event data.</p>
+            <p>- Fully tested with Jest, Testing Library, and BDD with Cucumber.</p>
+
+            <h2>Technologies Used:</h2>
+            </p>
+            <p>- React.js</p>
+            <p>- Recharts</p>
+            <p>- Google Calendar API</p>
+            <p>- Jest & React Testing Library</p>
+            <p>- Cucumber (BDD)</p>
+            <p>- Vite</p>
+            <p>- AWS Lambda (Serverless Functions)</p>
+            <p>- Git & Github Pages</p>
+
+            <p>
+                <a href="https://meet-beta-rosy.vercel.app/" target="_blank" rel="noopener noreferrer">Hosted
+                    version</a> |
+                <a href="https://github.com/LambicJaune/meet" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+            <a href="#">
+                <img class="social-media-icons" src="svg/facebook-icon.svg" alt="facebook icon">
+            </a>
+            <a href="#">
+                <img class="social-media-icons" src="svg/instagram-icon.svg" alt="instagram icon">
+            </a>
+            <a href="#">
+                <img class="social-media-icons" src="svg/twitter-icon.svg" alt="twitter icon">
+            </a>
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>
