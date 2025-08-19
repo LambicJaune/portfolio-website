@@ -377,7 +377,6 @@ button:active {
 
     .grid__item:hover .overlay {
         opacity: 0.9;
-        pointer-events: auto;
     }
 
     .grid__item:last-child {
