@@ -9,26 +9,32 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Cal+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Condensed+One&family=Tagesschrift&family=Young+Serif&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Cal+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Condensed+One&family=Tagesschrift&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
 </head>
+
 <body>
-    
+
     <header class="page-header">
-        <img src="./img/logo-gael-giraud.png" width="130" height="104" class="page-header__item" alt="logo of the name gael giraud in black, cursive letters">
+        <img src="./img/logo-gael-giraud.png" width="130" height="104" class="page-header__item"
+            alt="logo of the name gael giraud in black, cursive letters">
         <nav class="main-navigation page-header__item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
                     <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
                 </li>
                 <li role="presentation">
-                    <a href="this-is-me.html" role="menuitem" class="navigation-list__item" aria-label="About Gael Giraud">This is me</a>
+                    <a href="this-is-me.html" role="menuitem" class="navigation-list__item"
+                        aria-label="About Gael Giraud">This is me</a>
                 </li>
                 <li role="presentation">
                     <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
                 </li>
                 <li role="presentation">
-                    <a href="get-in-touch.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Get in touch</a>
+                    <a href="get-in-touch.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Get in touch</a>
                 </li>
             </ul>
         </nav>
@@ -39,54 +45,48 @@
         <div id="contact-info">
             <h1>Contact</h1>
             Gael Giraud<br>
-            Heavy Metal Strasse 66<br>
-            12435 Berlin<br>
-            Deutschland<br>
+            44625 Herne<br>
+            NRW, Germany<br>
             <br>
-            <a href="tel:+49 30 4849 2016">Tel +49 30 4849 2016</a><br>
-            <a href="mailto:thehopman@outlook.com">thehopman(a)outlook(dot)com</a><br>
-            <a href="mailto:thehopman@outlook.com">CONTACT ME</a>
+            <a href="tel:+49 176 603 110 59">Tel +49 176 603 110 59</a>
+            <p>thehopman(a)outlook(dot)com</p>
         </div>
         <br>
         <div id="contact-form">
-            <form action="#" method="post">
+            <form action="#" method="post" aria-label="Contact form">
                 <div class="input-wrapper">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="fname" required>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" aria-label="First Name"
+                        required>
                 </div>
                 <div class="input-wrapper">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lname" required>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" aria-label="Last Name" required>
                 </div>
                 <div class="input-wrapper">
-                    <label for="message">Your message</label>
                     <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Type your message here"
-                        required></textarea>
+                        aria-label="Your message" required></textarea>
                 </div>
                 <div class="input-wrapper">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="user_email" required>
+                    <input type="email" id="email" name="user_email" placeholder="Email" aria-label="Email" required>
                 </div>
                 <button type="submit" id="contact-form-button">Send</button>
             </form>
+
         </div>
 
     </main>
 
     <footer class="page-footer">
-        <p>Find me on</p>
+        <p>Also find me on</p>
         <div class="social-media">
-            <a href="#">
-                <img class="social-media-icons" src="svg/facebook-icon.svg" alt="facebook icon">
+            <a href="https://github.com/LambicJaune/" target="_blank" rel="noopener noreferrer">
+                <img class="social-media-icons" src="img/github-mark.png" alt="github icon">
             </a>
-            <a href="#">
-                <img class="social-media-icons" src="svg/instagram-icon.svg" alt="instagram icon">
-            </a>
-            <a href="#">
-                <img class="social-media-icons" src="svg/twitter-icon.svg" alt="twitter icon">
+            <a href="https://www.linkedin.com/in/gael-giraud-b1558a364/" target="_blank" rel="noopener noreferrer">
+                <img class="social-media-icons" src="img/linkedin-icon.png" alt="linkedin icon">
             </a>
         </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
 </body>
+
 </html>

@@ -143,6 +143,7 @@ button:active,
 
 #contact-form-button {
     color: var(--text-color-darker-backgrounds);
+    font-size: 20px;
 }
 
 .profile__portrait {
@@ -171,9 +172,23 @@ button:active,
     margin: 0 auto;
 }
 
-.social-media-icons {
-    width: 40px;
+.social-media {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
+
+.social-media a {
+    display: inline-flex;
+}
+
+.social-media-icons {
+    display: block;
+    width: 4vw;
+    max-width: 40px;
+}
+
 
 .about-text {
     text-align: center;
@@ -302,7 +317,8 @@ button:active,
         align-items: center;
         justify-content: center;
         opacity: 0;
-        pointer-events: none; /* Prevents interfering with hover */
+        pointer-events: none;
+        /* Prevents interfering with hover */
         transition: opacity 0.3s ease;
         font-weight: bold;
         font-size: 1.2rem;
@@ -311,19 +327,20 @@ button:active,
     }
 
     .overlay h1 {
-    color: var(--text-color-darker-backgrounds);
-}
+        color: var(--text-color-darker-backgrounds);
+    }
 
-.overlay-link:hover h1,
-.overlay-link:focus h1,
-.overlay-link:active h1 {
-    color: var(--text-color-darker-backgrounds); /* prevent color change */
-}
+    .overlay-link:hover h1,
+    .overlay-link:focus h1,
+    .overlay-link:active h1 {
+        color: var(--text-color-darker-backgrounds);
+        /* prevent color change */
+    }
 
 
     .grid__item:hover .overlay {
         opacity: 0.9;
-        pointer-events: auto; 
+        pointer-events: auto;
     }
 
     .grid__item:last-child {
@@ -334,22 +351,28 @@ button:active,
 
 .image-stack {
     display: flex;
-    flex-wrap: wrap;         /* Allows wrapping on smaller screens */
-    gap: 2rem;               /* Space between images */
-    justify-content: center; /* Centers images horizontally */
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    gap: 2rem;
+    /* Space between images */
+    justify-content: center;
+    /* Centers images horizontally */
 }
 
 .image-stack img {
-    max-width: 100%;         /* Responsive */
+    max-width: 100%;
+    /* Responsive */
     height: auto;
     display: block;
-    flex: 1 1 calc(50% - 2rem); /* Two images per row on desktop, accounting for gap */
+    flex: 1 1 calc(50% - 2rem);
+    /* Two images per row on desktop, accounting for gap */
 }
 
 /* Mobile stacking */
 @media (max-width: 768px) {
     .image-stack img {
-        flex: 1 1 100%;      /* Full width on small screens */
+        flex: 1 1 100%;
+        /* Full width on small screens */
     }
 }
 
@@ -469,6 +492,7 @@ button:active,
 }
 
 @media (max-width: 665px) {
+
     .button,
     .button__secondary {
         margin: 10px auto;

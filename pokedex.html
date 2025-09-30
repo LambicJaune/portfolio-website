@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Meet App</title>
+    <title>The Pokédex App</title>
     <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,42 +41,46 @@
 
     <main>
         <div class="content-container" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0;">
-            <h1>THE MEET APP</h1>
-
-            <div class="image-stack">
-                <img src="./img/meet-app-1.jpg" alt="first screenshot of the Meet App">
-                <img src="./img/meet-app-2.jpg" alt="second screenshot of the Meet App">
-            </div>
-
+            <h1>THE POKÉDEX APP</h1>
+            <img src="img/pokedex-home.jpg" alt="screenshot of the Pokédex App displaying a Pokémon">
             <h2>Objective</h2>
-            <p>To create a user-friendly event planner that sources events from the Google Calendar API, allowing event
-                filtering by city and number, and to visualize data interactively. The app is fully responsive and
-                supports offline functionality.</p>
+            <p>To build a small interractive JavaScript application that lets users explore a wide range of Pokémon,
+                using HTML, CSS and JavaScript. Using the PokéAPI, the app fetches and displays each Pokémon's image as
+                well as details regarding their height and types. Users can search for specific Pokémon by name, and
+                navigate through the list using pagination controls. The app is designed to be responsive and
+                user-friendly, providing an engaging experience for Pokémon enthusiasts.</p>
 
             <h2>Key features:</h2>
 
-            <p>- Google Calendar OAuth integration.</p>
-            <p>- Dynamic event list based on city and number of events.</p>
-            <p>- Offline support via service workers.</p>
-            <p>- LocalStorage caching of event data.</p>
-            <p>- Fully tested with Jest, Testing Library, and BDD with Cucumber.</p>
+            <p>- Loads data from an external API</p>
+            <p>- Displays a list of items</p>
+            <p>- On user action (e.e. by clicking on a list item), displays details for that item</p>
+            <p>- Search-as-you-type filter to retrieve Pokémon by name</p>
+            <p>- Responsive design for various screen sizes</p>
 
             <h2>Technologies Used:</h2>
 
-            <p>- React.js</p>
-            <p>- Recharts</p>
-            <p>- Google Calendar API</p>
-            <p>- Jest & React Testing Library</p>
-            <p>- Cucumber (BDD)</p>
-            <p>- Vite</p>
-            <p>- AWS Lambda (Serverless Functions)</p>
-            <p>- Git & Github Pages</p>
+            <p>- JavaScript (ES6) - Provides the app’s logic, including DOM manipulation, API requests, and event
+                handling.</p>
+            <p>- HTML 5 & CSS3 - Structure (HTML) and styling (CSS), with CSS3 features like gradients, transforms,
+                media queries, etc.</p>
+            <p>- ESLint rules - To ensure code quality and consistency</p>
+            <p>- Bootstrap 5.3 - To facilitate responsive design and layout</p>
+            <p>- GitHub Pages - To host the application</p>
+
+            <h3>Reflection on this project :</h3>
+            <p>While this is a very basic project, this was my very first introduction to coding and was very exciting.
+                I learned a lot about how to structure a web application, work with APIs, and implement interactive
+                features using JavaScript. It was rewarding to see my ideas come to life and to create something that
+                others could use and enjoy.</p>
 
             <p>
-                <a href="https://meet-beta-rosy.vercel.app/" target="_blank" rel="noopener noreferrer">Hosted
-                    version</a> |
-                <a href="https://github.com/LambicJaune/meet" target="_blank" rel="noopener noreferrer">GitHub
+                <a href="https://github.com/LambicJaune/pokedex" target="_blank" rel="noopener noreferrer"
+                    class="button">GitHub
                     repository</a>
+                <a href="https://lambicjaune.github.io/pokedex/" target="_blank" rel="noopener noreferrer"
+                    class="button">Live
+                    version</a>
             </p>
         </div>
     </main>
