@@ -2,7 +2,7 @@
 colors used
 
 Text Color (black): #544855;
-Primary Color (bight orange): #e13200;
+Primary Color (bright orange): #e13200;
 Secondary Color (brown): #693d33;
 Secondary Buttons Color (grey blue): #90aead;
 
@@ -210,20 +210,20 @@ button:active {
 }
 
 .social-media {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-media a {
-  display: inline-flex;
+    display: inline-flex;
 }
 
 .social-media-icons {
-  display: block;
-  width: 5vw;
-  max-width: 40px;
+    display: block;
+    width: 5vw;
+    max-width: 40px;
 }
 
 
@@ -326,6 +326,50 @@ button:active {
 
 /* end grid fallback */
 
+/* Top and Bottom Borders Hover + Active Effect on navigation */
+li.topBotomBordersIn a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+li.topBotomBordersIn a::before,
+li.topBotomBordersIn a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #e13200;
+    /* Updated color */
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+li.topBotomBordersIn a::before {
+    top: 0;
+    transform: translateY(-10px);
+}
+
+li.topBotomBordersIn a::after {
+    bottom: 0;
+    transform: translateY(10px);
+}
+
+/* Show lines on hover */
+li.topBotomBordersIn a:hover::before,
+li.topBotomBordersIn a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keep lines visible for active menu item */
+li.topBotomBordersIn a.navigation-list__item--active::before,
+li.topBotomBordersIn a.navigation-list__item--active::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @supports (display: grid) {
     .grid {
         display: -ms-grid;
@@ -420,22 +464,28 @@ button:active {
 
 .image-stack {
     display: flex;
-    flex-wrap: wrap;         /* Allows wrapping on smaller screens */
-    gap: 2rem;               /* Space between images */
-    justify-content: center; /* Centers images horizontally */
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    gap: 2rem;
+    /* Space between images */
+    justify-content: center;
+    /* Centers images horizontally */
 }
 
 .image-stack img {
-    max-width: 100%;         /* Responsive */
+    max-width: 100%;
+    /* Responsive */
     height: auto;
     display: block;
-    flex: 1 1 calc(50% - 2rem); /* Two images per row on desktop, accounting for gap */
+    flex: 1 1 calc(50% - 2rem);
+    /* Two images per row on desktop, accounting for gap */
 }
 
 /* Mobile stacking */
 @media (max-width: 768px) {
     .image-stack img {
-        flex: 1 1 100%;      /* Full width on small screens */
+        flex: 1 1 100%;
+        /* Full width on small screens */
     }
 }
 
