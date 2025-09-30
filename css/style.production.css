@@ -172,6 +172,7 @@ button:active {
 
 #contact-form-button {
     color: #fff;
+    font-size: 20px;
 }
 
 .profile__portrait {
@@ -208,9 +209,23 @@ button:active {
     margin: 0 auto;
 }
 
-.social-media-icons {
-    width: 40px;
+.social-media {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
+
+.social-media a {
+  display: inline-flex;
+}
+
+.social-media-icons {
+  display: block;
+  width: 5vw;
+  max-width: 40px;
+}
+
 
 .about-text {
     text-align: center;
