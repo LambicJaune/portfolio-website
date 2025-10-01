@@ -74,20 +74,14 @@ a:visited {
 a:hover,
 a:focus {
     text-decoration: none;
-
-    /* No underlining when overing over link or selected using a keyboard */
 }
 
 a:active {
     color: var(--bright-grey);
-
-    /* changes the link text color to bright gray when the link is clicked */
 }
 
 a:focus {
     outline: 2px solid var(--primary-color);
-
-    /* adds a rust colored outline around the link when it has focus = is selected using the keyboard */
 }
 
 .button,
@@ -122,7 +116,7 @@ button:visited,
 
 .button__secondary {
     background-color: var(--secondary-buttons);
-    color: var(--text-color-secondary-buttons);
+    color: var(--text-color);
 }
 
 .button__secondary:visited {
@@ -134,11 +128,6 @@ button:active,
 .button__secondary:active {
     background-color: var(--bright-grey);
     color: var(--text-color-darker-backgrounds);
-}
-
-.button__secondary {
-    background-color: var(--secondary-buttons);
-    color: var(--text-color);
 }
 
 #contact-form-button {
@@ -188,7 +177,6 @@ button:active,
     width: 4vw;
     max-width: 40px;
 }
-
 
 .about-text {
     text-align: center;
@@ -272,8 +260,9 @@ button:active,
 .grid__item {
     display: inline-block;
     width: 33%;
+    position: relative;
+    overflow: hidden;
 }
-
 /* end grid fallback */
 
 @supports (display: grid) {
@@ -290,8 +279,6 @@ button:active,
         min-height: auto;
         margin: 0;
         place-items: center;
-        position: relative;
-        overflow: hidden;
         transition: transform 0.3s ease;
     }
 
@@ -305,42 +292,56 @@ button:active,
         text-align: center;
     }
 
+    /* ===== Overlay fixes ===== */
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--primary-color);
-        color: var(--text-color-darker-backgrounds);
+        background-color: rgba(203, 44, 0, 0.9);
+        color: #fff;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         opacity: 0;
         pointer-events: none;
-        /* Prevents interfering with hover */
-        transition: opacity 0.3s ease;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-align: center;
         padding: 1rem;
+        box-sizing: border-box;
+        transition: opacity 0.3s ease;
     }
 
-    .overlay h1 {
-        color: var(--text-color-darker-backgrounds);
-    }
-
-    .overlay-link:hover h1,
-    .overlay-link:focus h1,
-    .overlay-link:active h1 {
-        color: var(--text-color-darker-backgrounds);
-        /* prevent color change */
-    }
-
-
-    .grid__item:hover .overlay {
-        opacity: 0.9;
+    .grid__item:hover .overlay,
+    .grid__item:focus-within .overlay {
+        opacity: 1;
         pointer-events: auto;
+    }
+
+    .overlay>div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay h2 {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        text-align: center;
+        margin-bottom: 0.5rem;
+        word-wrap: break-word;
+    }
+
+    .overlay img {
+        max-width: 90%;
+        max-height: 70%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
     }
 
     .grid__item:last-child {
@@ -352,20 +353,15 @@ button:active,
 .image-stack {
     display: flex;
     flex-wrap: wrap;
-    /* Allows wrapping on smaller screens */
     gap: 2rem;
-    /* Space between images */
     justify-content: center;
-    /* Centers images horizontally */
 }
 
 .image-stack img {
     max-width: 100%;
-    /* Responsive */
     height: auto;
     display: block;
     flex: 1 1 calc(50% - 2rem);
-    /* Two images per row on desktop, accounting for gap */
 }
 
 /* Top and Bottom Borders Hover + Active Effect on navigation */
@@ -374,8 +370,6 @@ li.topBotomBordersIn a {
     display: inline-block;
     text-decoration: none;
 }
-
-/* Pseudo-elements for the borders */
 li.topBotomBordersIn a::before,
 li.topBotomBordersIn a::after {
     content: "";
@@ -384,86 +378,44 @@ li.topBotomBordersIn a::after {
     width: 100%;
     height: 2px;
     background: #e13200;
-    /* Active color */
     opacity: 0;
     transition: all 0.3s ease;
 }
-
-/* Top line (hidden above initially) */
 li.topBotomBordersIn a::before {
     top: 0;
     transform: translateY(-10px);
 }
-
-/* Bottom line (hidden below initially) */
 li.topBotomBordersIn a::after {
     bottom: 0;
     transform: translateY(10px);
 }
-
-/* Animate lines on hover */
 li.topBotomBordersIn a:hover::before,
-li.topBotomBordersIn a:hover::after {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Keep lines visible for the active page */
+li.topBotomBordersIn a:hover::after,
 li.topBotomBordersIn a.navigation-list__item--active::before,
 li.topBotomBordersIn a.navigation-list__item--active::after {
     opacity: 1;
     transform: translateY(0);
 }
 
-
-/* Mobile stacking */
-@media (max-width: 768px) {
-    .image-stack img {
-        flex: 1 1 100%;
-        /* Full width on small screens */
-    }
-}
-
+/* ===== Keyframes ===== */
 @keyframes sun-color-change {
-    0% {
-        fill: var(--bright-sun-svg);
-    }
-
-    50% {
-        fill: var(--hot-sun-svg);
-    }
-
-    100% {
-        fill: var(--bright-sun-svg);
-    }
+    0% { fill: var(--bright-sun-svg); }
+    50% { fill: var(--hot-sun-svg); }
+    100% { fill: var(--bright-sun-svg); }
 }
 
-#path84 {
-    animation: 4s sun-color-change infinite linear;
-}
+#path84 { animation: 4s sun-color-change infinite linear; }
 
 @keyframes cloud-move {
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(150px, 0);
-    }
+    from { transform: translate(0,0); }
+    to { transform: translate(150px,0); }
 }
 
-.path83-cloud {
-    animation: 20s cloud-move infinite alternate linear;
-}
+.path83-cloud { animation: 20s cloud-move infinite alternate linear; }
 
 @keyframes cloud-move-reverse {
-    from {
-        transform: translateX(0) scale(1);
-    }
-
-    to {
-        transform: translateX(-280px) scale(1.8);
-    }
+    from { transform: translateX(0) scale(1); }
+    to { transform: translateX(-280px) scale(1.8); }
 }
 
 .path85-cloud {
@@ -473,142 +425,41 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 }
 
 @keyframes brighter-ground {
-    0% {
-        fill: var(--bright-grey);
-    }
-
-    50% {
-        fill: var(--ground-berlin-svg);
-    }
-
-    100% {
-        fill: var(--bright-grey);
-    }
+    0% { fill: var(--bright-grey); }
+    50% { fill: var(--ground-berlin-svg); }
+    100% { fill: var(--bright-grey); }
 }
 
-#path82 {
-    animation: 4s brighter-ground infinite linear;
-}
+#path82 { animation: 4s brighter-ground infinite linear; }
 
-@media all and (max-width: 500px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-    .grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
+/* ===== Responsive ===== */
+@media all and (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+@media all and (min-width: 500px) and (max-width: 750px) { .grid { grid-template-columns: 1fr 1fr; } }
 @media all and (max-width: 750px) {
-    .grid {
-        grid-gap: 10px;
-    }
-
-    .grid__item:last-child {
-        grid-column: auto / auto;
-        grid-row: auto / auto;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
+    .grid { grid-gap: 10px; }
+    .grid__item:last-child { grid-column: auto / auto; grid-row: auto / auto; }
+    h1 { font-size: 30px; }
 }
-
 @media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
+    .about-grid { grid-template-columns: 1fr; }
+    .overlay h2 { font-size: 1.25rem; }
+    .image-stack img { flex: 1 1 100%; }
 }
-
 @media (max-width: 665px) {
-    .profile {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 0 20px;
-    }
+    .profile { display: flex; flex-direction: column; text-align: center; margin: 0 20px; }
+    .profile__portrait { text-align: center; margin: 0 auto; }
+    .button, .button__secondary { margin: 10px auto; width: 90%; display: block; }
+    .page-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 0; }
+    .page-header__item { margin: 0 auto; width: 260px; height: auto; }
+    .main-navigation { width: 100%; }
+    .navigation-list { display: flex; justify-content: center; padding: 0; margin: 0; list-style: none; }
+    .navigation-list li { margin: 0 15px; font-size: 30px; text-align: center; }
+    #contact-form { margin: 0 20px; }
+    .input-wrapper { flex-direction: column; align-items: flex-start; }
+    .input-wrapper label { flex: none; width: 100%; margin-bottom: 0.3rem; }
+    .input-wrapper input, .input-wrapper textarea { width: 100%; flex: none; }
+    #svg1 { max-width: 90%; }
 }
-
-@media (max-width: 665px) {
-    .profile__portrait {
-        text-align: center;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 665px) {
-
-    .button,
-    .button__secondary {
-        margin: 10px auto;
-        width: 90%;
-        display: block;
-    }
-}
-
-@media (max-width: 665px) {
-    .page-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-    }
-
-    .page-header__item {
-        margin: 0 auto;
-        width: 260px;
-        height: auto;
-    }
-
-    .main-navigation {
-        width: 100%;
-    }
-
-    .navigation-list {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    .navigation-list li {
-        margin: 0 15px;
-        font-size: 30px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 665px) {
-    #contact-form {
-        margin: 0 20px;
-    }
-}
-
-@media (max-width: 665px) {
-    .input-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .input-wrapper label {
-        flex: none;
-        width: 100%;
-        margin-bottom: 0.3rem;
-    }
-
-    .input-wrapper input,
-    .input-wrapper textarea {
-        width: 100%;
-        flex: none;
-    }
-}
-
-@media (max-width: 665px) {
-    #svg1 {
-        max-width: 90%;
-    }
+@media (max-width: 600px) {
+    .overlay img { width: 80%; }
 }
