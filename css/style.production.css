@@ -469,13 +469,15 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        width: 100%;
+        text-align: center;
         margin-bottom: 0;
     }
 
     .page-header__item {
-        margin: 0 auto;
-        width: 260px;
+        margin: 0 auto 10px auto;
+        width: auto;
         height: auto;
     }
 
@@ -489,14 +491,15 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
         line-height: 1;
         color: #e13200;
         transition: color 0.2s ease;
-        margin: 15px 0;
+        margin: 0 auto;
         /* space between logo and hamburger */
     }
 
     .main-navigation {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
+        width: 100%;
     }
 
     .navigation-list {
