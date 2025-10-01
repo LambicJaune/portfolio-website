@@ -540,6 +540,11 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     #svg1 {
         max-width: 90%;
     }
+
+    .social-media-icons {
+        width: 12vw;  
+        max-width: 50px;
+    }
 }
 
 @media (max-width: 600px) {
