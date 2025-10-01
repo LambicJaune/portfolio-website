@@ -126,6 +126,22 @@
     </script>
 
     <script src="js/tota11y.min.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.navigation-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Optional: close menu when clicking a link
+        const navLinks = document.querySelectorAll('.navigation-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+            });
+        });
+    </script>
 </body>
 
 </html>
