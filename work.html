@@ -20,6 +20,9 @@
         <img src="./img/logo-gael-giraud.png" width="130" height="104" class="page-header__item"
             alt="logo of the name gael giraud in black, cursive letters">
         <nav class="main-navigation page-header__item">
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
             <ul role="menubar" class="navigation-list">
                 <li role="presentation" class="topBotomBordersIn">
                     <a href="index.html" role="menuitem"
@@ -181,6 +184,22 @@
         </div>
     </footer>
     <script src="js/tota11y.min.js"></script>
+    <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.navigation-list');
+
+    hamburger.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+
+    // Optional: close menu when clicking a link
+    const navLinks = document.querySelectorAll('.navigation-list a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('show');
+        });
+    });
+</script>
 </body>
 
 </html>
