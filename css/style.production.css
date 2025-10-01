@@ -339,12 +339,12 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 /* Mobile tweaks for overlay */
 @media (max-width: 768px) {
     .overlay h2 {
-        font-size: clamp(1.3rem, 5vw, 1.8rem);
+        font-size: clamp(1.5rem, 5.5vw, 1.9rem);
     }
 
     .overlay img {
-        max-width: 90%;
-        max-height: 55%;
+        max-width: 95%;
+        max-height: 60%;
     }
 }
 
