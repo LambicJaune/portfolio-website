@@ -358,6 +358,13 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     /* brown */
 }
 
+.project-image {
+    display: block; 
+    margin: 20px auto;
+    max-width: 100%; 
+    height: auto;
+}
+
 /* Mobile tweaks for overlay */
 @media (max-width: 768px) {
     .overlay h2 {
