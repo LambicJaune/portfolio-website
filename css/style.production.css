@@ -336,6 +336,27 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     flex-shrink: 0;
 }
 
+.hamburger {
+    display: none;
+    font-size: 3rem;
+    /* adjust size */
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+    /* centers under logo */
+    line-height: 1;
+    color: #e13200;
+    transition: color 0.2s ease;
+
+}
+
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+    color: #693d33;  /* brown */
+}
+
 /* Mobile tweaks for overlay */
 @media (max-width: 768px) {
     .overlay h2 {
@@ -456,22 +477,39 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
         height: auto;
     }
 
+    /* Show hamburger only on mobile */
+    .hamburger {
+        display: block;
+    }
+
     .main-navigation {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navigation-list {
-        display: flex;
-        justify-content: center;
+        display: none;
+        /* hide menu initially */
+        flex-direction: column;
+        gap: 15px;
         padding: 0;
-        margin: 0;
-        list-style: none;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navigation-list.show {
+        display: flex;
+        /* show menu when hamburger clicked */
     }
 
     .navigation-list li {
-        margin: 0 15px;
-        font-size: 30px;
-        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navigation-list li a {
+        font-size: 1.8rem;
+        /* make menu items readable on mobile */
     }
 
     #contact-form-wrapper {

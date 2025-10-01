@@ -10,6 +10,7 @@ Background-color (sand beige): #fbe9d0
 */
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -36,6 +37,7 @@ h1 {
 
 h1:hover {
     color: #cb2c00;
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -45,6 +47,10 @@ a {
 
 a:visited {
     color: #693d33;
+}
+
+.navigation-list__item:visited {
+    color: #cb2c00;
 }
 
 a:hover,
@@ -222,7 +228,7 @@ button:active {
     margin-left: 15px;
 }
 
-/* Grid fallback */
+/* start grid fallback */
 .grid__item {
     display: inline-block;
     width: 33%;
@@ -230,7 +236,7 @@ button:active {
     overflow: hidden;
 }
 
-/* Navigation hover borders */
+/* Top and Bottom Borders Hover + Active Effect on navigation */
 li.topBotomBordersIn a {
     position: relative;
     display: inline-block;
@@ -267,7 +273,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     transform: translateY(0);
 }
 
-/* Overlay styles */
+/* ===== Overlay fixes ===== */
 .overlay-link {
     display: block;
     width: 100%;
@@ -300,6 +306,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     pointer-events: auto;
 }
 
+/* Overlay content scaling fix */
 .overlay>div {
     display: flex;
     flex-direction: column;
@@ -309,8 +316,8 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     height: 100%;
     max-height: 100%;
     padding: 0.5rem 0;
-    overflow: hidden;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .overlay h2 {
@@ -329,7 +336,27 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     flex-shrink: 0;
 }
 
-/* Mobile overlay tweaks */
+/* Hamburger button */
+.hamburger {
+    display: none;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+    line-height: 1;
+    color: #e13200;
+    transition: color 0.2s ease;
+}
+
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+    color: #693d33;
+    /* brown on hover/focus/active */
+}
+
+/* Mobile tweaks for overlay */
 @media (max-width: 768px) {
     .overlay h2 {
         font-size: clamp(1.5rem, 5.5vw, 1.9rem);
@@ -368,6 +395,11 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     .grid__item-content {
         text-align: center;
     }
+
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
 }
 
 /* Image stack */
@@ -391,20 +423,20 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     }
 }
 
-/* Responsive grid adjustments */
-@media (max-width: 500px) {
+/* Responsive adjustments */
+@media all and (max-width: 500px) {
     .grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 500px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 750px) {
     .grid {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 750px) {
+@media all and (max-width: 750px) {
     .grid {
         gap: 10px;
     }
@@ -442,22 +474,36 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
         height: auto;
     }
 
+    /* Show hamburger only on mobile */
+    .hamburger {
+        display: block;
+    }
+
     .main-navigation {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navigation-list {
-        display: flex;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
         padding: 0;
-        margin: 0;
-        list-style: none;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navigation-list.show {
+        display: flex;
     }
 
     .navigation-list li {
-        margin: 0 15px;
-        font-size: 30px;
-        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navigation-list li a {
+        font-size: 1.8rem;
     }
 
     #contact-form-wrapper {
