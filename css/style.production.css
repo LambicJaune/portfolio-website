@@ -261,7 +261,7 @@ button:active {
     margin-bottom: 0.5rem;
 }
 
-#contact-form form {
+#contact-form-wrapper form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -322,6 +322,10 @@ button:active {
 .grid__item {
     display: inline-block;
     width: 33%;
+    position: relative;
+    /* ensures overlay positions correctly */
+    overflow: hidden;
+    /* prevents overlay content from spilling out */
 }
 
 /* end grid fallback */
@@ -370,6 +374,87 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     transform: translateY(0);
 }
 
+/* ===== Overlay fixes ===== */
+.overlay-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(203, 44, 0, 0.9);
+    /* semi-transparent overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.grid__item:hover .overlay,
+.grid__item:focus-within .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h2 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    /* scales with screen width */
+    text-align: center;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 70%;
+    /* ensures image fits overlay box */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile tweaks for overlay */
+@media (max-width: 768px) {
+    .overlay h2 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+
+    .overlay img {
+        max-width: 100%;
+        max-height: 70%;
+    }
+}
+
+.project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
 @supports (display: grid) {
     .grid {
         display: -ms-grid;
@@ -386,8 +471,6 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
         min-height: auto;
         margin: 0;
         place-items: center;
-        position: relative;
-        overflow: hidden;
         -webkit-transition: -webkit-transform 0.3s ease;
         transition: -webkit-transform 0.3s ease;
         transition: transform 0.3s ease;
@@ -403,54 +486,6 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 
     .grid__item-content {
         text-align: center;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #cb2c00;
-        color: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        opacity: 0;
-        pointer-events: none;
-
-        /* Prevents interfering with hover */
-        -webkit-transition: opacity 0.3s ease;
-        transition: opacity 0.3s ease;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-align: center;
-        padding: 1rem;
-    }
-
-
-    /* Force text color to remain the same on all link states */
-    .grid__item a.overlay-link h1 {
-        color: var(--text-color-darker-backgrounds);
-        margin: 0;
-    }
-
-    /* Optional: disable hover color changes */
-    .grid__item a.overlay-link:hover h1,
-    .grid__item a.overlay-link:focus h1,
-    .grid__item a.overlay-link:active h1 {
-        color: var(--text-color-darker-backgrounds);
-    }
-
-    .grid__item:hover .overlay {
-        opacity: 0.9;
-        pointer-events: auto;
     }
 
     .grid__item:last-child {
@@ -489,7 +524,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     }
 }
 
-
+/* ===== Animation keyframes ===== */
 @-webkit-keyframes sun-color-change {
     0% {
         fill: #edc655;
@@ -729,7 +764,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 }
 
 @media (max-width: 665px) {
-    #contact-form {
+    #contact-form-wrapper {
         margin: 0 20px;
     }
 }
@@ -737,5 +772,16 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 @media (max-width: 665px) {
     #svg1 {
         max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay {
+        padding: 1.6rem;
+        text-align: center;
+    }
+
+    .overlay img {
+        width: 90%;
     }
 }
