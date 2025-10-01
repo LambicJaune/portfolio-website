@@ -169,12 +169,19 @@ button:active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1rem;
 }
 
 .table-container {
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.about-grid-item {
+    text-align: center;
 }
 
 .about-grid-item h3 {
@@ -429,6 +436,10 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 @media (max-width: 768px) {
     .image-stack img {
         flex: 1 1 100%;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem; 
     }
 }
 
