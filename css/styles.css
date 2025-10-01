@@ -417,6 +417,13 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     flex: 1 1 calc(50% - 2rem);
 }
 
+.project-image {
+    display: block; 
+    margin: 20px auto;
+    max-width: 100%; 
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .image-stack img {
         flex: 1 1 100%;
