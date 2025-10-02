@@ -165,6 +165,21 @@ button:active {
     margin: 0 20px;
 }
 
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.table-container {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .about-grid-item {
     text-align: center;
 }
@@ -172,17 +187,6 @@ button:active {
 .about-grid-item h3 {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
-}
-
-.about-grid-item h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-}
-
-.table-container {
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 #contact-form-wrapper form {
@@ -339,14 +343,15 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     flex-shrink: 0;
 }
 
-/* Hamburger button */
 .hamburger {
     display: none;
     font-size: 3rem;
+    /* adjust size */
     background: none;
     border: none;
     cursor: pointer;
     margin: 10px auto;
+    /* centers under logo */
     line-height: 1;
     color: #e13200;
     transition: color 0.2s ease;
@@ -356,7 +361,14 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 .hamburger:focus,
 .hamburger:active {
     color: #693d33;
-    /* brown on hover/focus/active */
+    /* brown */
+}
+
+.project-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Mobile tweaks for overlay */
@@ -400,8 +412,8 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     }
 
     .grid__item:last-child {
-        grid-column: auto / auto;
-        grid-row: auto / auto;
+        grid-column: 3;
+        grid-row: 1 / span 2;
     }
 }
 
@@ -420,22 +432,18 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     flex: 1 1 calc(50% - 2rem);
 }
 
-.project-image {
-    display: block; 
-    margin: 20px auto;
-    max-width: 100%; 
-    height: auto;
-}
-
 @media (max-width: 768px) {
     .image-stack img {
         flex: 1 1 100%;
     }
+
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem; 
+        gap: 1.5rem;
     }
 }
+
+/* Animations omitted for brevity (unchanged from your file) */
 
 /* Responsive adjustments */
 @media all and (max-width: 500px) {
@@ -453,6 +461,11 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 @media all and (max-width: 750px) {
     .grid {
         gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 
@@ -502,26 +515,29 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
         color: #e13200;
         transition: color 0.2s ease;
         margin: 0 auto;
+        /* space between logo and hamburger */
     }
 
     .main-navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .navigation-list {
         display: none;
+        /* hide menu initially */
         flex-direction: column;
         gap: 15px;
         padding: 0;
         margin: 10px 0;
         text-align: center;
-        width: 100%;
     }
 
     .navigation-list.show {
         display: flex;
+        /* show menu when hamburger clicked */
     }
 
     .navigation-list li {
@@ -530,6 +546,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 
     .navigation-list li a {
         font-size: 1.8rem;
+        /* make menu items readable on mobile */
     }
 
     #contact-form-wrapper {
@@ -539,8 +556,9 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     #svg1 {
         max-width: 90%;
     }
+
     .social-media-icons {
-        width: 12vw;  
+        width: 12vw;
         max-width: 50px;
     }
 }

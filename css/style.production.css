@@ -366,9 +366,9 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 }
 
 .project-image {
-    display: block; 
+    display: block;
     margin: 20px auto;
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -413,8 +413,8 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     }
 
     .grid__item:last-child {
-        grid-column: auto / auto;
-        grid-row: auto / auto;
+        grid-column: 3;
+        grid-row: 1 / span 2;
     }
 }
 
@@ -437,9 +437,10 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     .image-stack img {
         flex: 1 1 100%;
     }
+
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem; 
+        gap: 1.5rem;
     }
 }
 
@@ -461,6 +462,11 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
 @media all and (max-width: 750px) {
     .grid {
         gap: 10px;
+    }
+
+    .grid__item:last-child {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 
@@ -516,7 +522,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     .main-navigation {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
         width: 100%;
     }
 
@@ -553,7 +559,7 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     }
 
     .social-media-icons {
-        width: 12vw;  
+        width: 12vw;
         max-width: 50px;
     }
 }
