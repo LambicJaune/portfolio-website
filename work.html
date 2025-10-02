@@ -25,15 +25,15 @@
             </button>
             <ul role="menubar" class="navigation-list">
                 <li role="presentation" class="topBotomBordersIn">
-                    <a href="index.html" role="menuitem"
-                        class="navigation-list__item navigation-list__item">Home</a>
+                    <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item">Home</a>
                 </li>
                 <li role="presentation" class="topBotomBordersIn">
                     <a href="this-is-me.html" role="menuitem" class="navigation-list__item"
                         aria-label="About Gael Giraud">This is me</a>
                 </li>
                 <li role="presentation" class="topBotomBordersIn">
-                    <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+                    <a href="work.html" role="menuitem"
+                        class="navigation-list__item navigation-list__item--active">Work</a>
                 </li>
                 <li role="presentation" class="topBotomBordersIn">
                     <a href="get-in-touch.html" role="menuitem" class="navigation-list__item">Get in touch</a>
@@ -53,8 +53,7 @@
                     <p>- Features include user registration, login, secure token-based authentication, movie
                         filtering, favorites management, and user profile updates.</p>
                 </div>
-                <a href="mytomhanks-app-react.html" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
+                <a href="mytomhanks-app-react.html" target="_self" rel="noopener noreferrer" class="overlay-link">
                     <div class="overlay">
                         <div>
                             <h2>Check it out!</h2>
@@ -70,8 +69,7 @@
                         TypeScript.</p>
                     <p>- Uses dialogs to display data from a movie card, e.g. synopsis or a director's biography</p>
                 </div>
-                <a href="mytomhanks-app-angular.html" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
+                <a href="mytomhanks-app-angular.html" target="_self" rel="noopener noreferrer" class="overlay-link">
                     <div class="overlay">
                         <div>
                             <h2>Check it out!</h2>
@@ -88,8 +86,7 @@
                     <p>- Built with Node.js, Express, and MongoDB.</p>
 
                 </div>
-                <a href="tom-hanks-movieAPI.html" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
+                <a href="tom-hanks-movieAPI.html" target="_self" rel="noopener noreferrer" class="overlay-link">
                     <div class="overlay">
                         <div>
                             <h2>Check it out!</h2>
@@ -106,8 +103,7 @@
                         their camera or gallery, or display their location.</p>
                     <p>The app uses Google Firebase for real-time data storage and authentication.</p>
                 </div>
-                <a href="small-talk-app.html" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
+                <a href="small-talk-app.html" target="_self" rel="noopener noreferrer" class="overlay-link">
                     <div class="overlay">
                         <div>
                             <h2>Check it out!</h2>
@@ -119,36 +115,16 @@
             <div class="grid__item">
                 <div class="grid__item-content">
                     <h2>The Pokédex</h2>
-                    <p>The Pokédex application allows the user to load a list of Pokémons as well as additional
-                        information about each of them on demand (user action), sourcing the data from an external API.
-                    </p>
+                    <p>The Pokédex is a simple application that allows users to load dynamically a list of items (Pokémon) as well as additional information regarding each of them on demand (user action).</p>
+                    <p>Data is fetched from an external public API called PokéAPI.</p>
+                    <p>It is built solely using JavaScript, HTML and CSS + Bootstrap.</p><br><br>
                 </div>
-                <a href="pokedex.html" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
+                <a href="pokedex.html" target="_self" rel="noopener noreferrer" class="overlay-link">
                     <div class="overlay">
                         <div>
                             <h2>Check it out!</h2>
                             <img src="img/pokedex.png" alt="screenshot of the Pokédex App">
                             <br><br>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="grid__item">
-                <div class="grid__item-content">
-                    <h2>The To-do List App</h2>
-                    <p>A simple to-do list application using HTML, CSS and JavaScript/jQuery, allowing people to :</p>
-                    <p>- Add items to the list.</p>
-                    <p>- Reorder items by dragging them.</p>
-                    <p>- Cross an item off the list by double-clicking the item.</p>
-                    <p>- Delete an item from the list by clicking the cross button.</p>
-                </div>
-                <a href="https://lambicjaune.github.io/to-do-list-app/" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
-                    <div class="overlay">
-                        <div>
-                            <h2>Check it out!</h2>
-                            <img src="./img/to-do-list.png" alt="screenshot of the To-do List App">
                         </div>
                     </div>
                 </a>
@@ -162,8 +138,7 @@
                         and provides powerful filtering and data visualization charts.</p>
                     <img src="./img/meet-app.png" alt=""><br><br>
                 </div>
-                <a href="meet-app.html" target="_self" rel="noopener noreferrer"
-                    class="overlay-link">
+                <a href="meet-app.html" target="_self" rel="noopener noreferrer" class="overlay-link">
                     <div class="overlay">
                         <h2>Check it out!</h2>
                     </div>
@@ -188,21 +163,21 @@
     </footer>
     <script src="js/tota11y.min.js"></script>
     <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navList = document.querySelector('.navigation-list');
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.navigation-list');
 
-    hamburger.addEventListener('click', () => {
-        navList.classList.toggle('show');
-    });
-
-    // Optional: close menu when clicking a link
-    const navLinks = document.querySelectorAll('.navigation-list a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('show');
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
         });
-    });
-</script>
+
+        // Optional: close menu when clicking a link
+        const navLinks = document.querySelectorAll('.navigation-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+            });
+        });
+    </script>
 </body>
 
 </html>
