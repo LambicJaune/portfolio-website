@@ -189,6 +189,10 @@ button:active {
     margin-bottom: 0.5rem;
 }
 
+#contact-form-button {
+    font-size: 20px;
+}
+
 #contact-form-wrapper form {
     display: flex;
     flex-direction: column;
