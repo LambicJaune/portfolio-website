@@ -376,6 +376,18 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     height: auto;
 }
 
+.bold-title {
+    font-weight: 600;
+}
+
+.tech-stack-list {
+    font-size: 1.1em; 
+    color: #e13200;
+    text-shadow: 1px 1px 0 #fff;
+    display: inline-block;
+}
+
+
 /* Mobile tweaks for overlay */
 @media (max-width: 768px) {
     .overlay h2 {

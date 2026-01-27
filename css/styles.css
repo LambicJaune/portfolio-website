@@ -165,6 +165,13 @@ button:active {
     margin: 0 20px;
 }
 
+.content-container strong {
+    font-family: 'Playfair Display', serif; /* more elegant contrast */
+    font-size: 1.3em;
+    color: #e13200;
+}
+
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -373,6 +380,18 @@ li.topBotomBordersIn a.navigation-list__item--active::after {
     margin: 20px auto;
     max-width: 100%;
     height: auto;
+}
+
+
+.bold-title {
+    font-weight: 600;
+}
+
+.tech-stack-list {
+    font-size: 1.1em; 
+    color: #e13200;
+    text-shadow: 1px 1px 0 #fff; 
+    display: inline-block;
 }
 
 /* Mobile tweaks for overlay */
