@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Recipe App</title>
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Cal+Sans&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Condensed+One&family=Tagesschrift&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <img src="./img/logo-gael-giraud.png" width="130" height="104" class="page-header__item"
+            alt="logo of the name gael giraud in black, cursive letters">
+        <nav class="main-navigation page-header__item">
+            <button class="hamburger" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="this-is-me.html" role="menuitem" class="navigation-list__item"
+                        aria-label="About Gael Giraud">This is me</a>
+                </li>
+                <li role="presentation">
+                    <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a href="get-in-touch.html" role="menuitem" class="navigation-list__item">Get in touch</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container" style="max-width: 800px; margin: 0 auto; text-align: center; padding: 0;">
+            <h1>THE RECIPE APP — A DJANGO RECIPE MANAGEMENT APP</h1>
+
+            <img src="./img/hero-pic-recipe-app.png"
+                alt="image of a smartphone displaying the Recipe App on a kitchen countertop with veggies">
+
+            <h2>Objective</h2>
+
+            <p>Build a scalable, data-driven recipe management application using Python and Django, starting from a
+                command-line foundation and evolving into a full web application with authentication, search, and
+                analytics features.</p>
+            <p><strong class="bold-title">Role:</strong> Full-stack developer</p>
+            <p><strong class="bold-title">Duration:</strong> 4 weeks</p>
+            <p><strong class="bold-title">Tech:</strong> Python, Django, PostgreSQL (Neon), SQLite, Pandas, Gunicorn,
+                WhiteNoise, Heroku</p>
+
+            <h2>The Challenge</h2>
+            <p>
+                How can users efficiently create, search, and analyze recipes within a secure, scalable web application
+                while maintaining clean architecture and strong data integrity?
+            </p>
+            <p>
+                Additionally, how can a simple command-line CRUD application evolve into a production-ready web
+                platform?
+            </p>
+
+            <h2>The Process</h2>
+
+            <h3>Phase 1 – Command-Line Foundation</h3>
+            <p>- Built a CRUD application using <span class="tech-stack-list">Python</span></p>
+            <p>- Managed recipe and user data with <span class="tech-stack-list">SQLite</span> (local development)</p>
+            <p>- Implemented object-oriented programming with <span class="tech-stack-list">Python classes</span> and
+                methods</p>
+            <p>- Added input validation and error handling</p>
+            <p><strong class="bold-title">Challenge:</strong> Handling data conversions between different formats
+                (objects, lists, strings)</p>
+            <p><strong class="bold-title">Solution:</strong> Structured class design, data normalization, and
+                step-by-step validation logic</p>
+
+            <img src="./img/recipe-app-cli.png" alt="Screenshot of the Recipe App command-line interface"
+                class="project-image">    
+
+            <h3>Phase 2 – Django Web Application</h3>
+            <p>- Built the application using <span class="tech-stack-list">Django 5.2</span> and <span
+                    class="tech-stack-list">Python 3.14.3</span></p>
+            <p>- Designed models for recipes and users, connected to <span class="tech-stack-list">PostgreSQL</span>
+                (production) and <span class="tech-stack-list">SQLite</span> (development)</p>
+            <p>- Implemented authentication and protected views using Django’s <span class="tech-stack-list">built-in
+                    auth system</span></p>
+            <p>- Developed full CRUD functionality for recipes</p>
+            <p>- Created dynamic ModelForms to add, edit, and validate recipes</p>
+            <p>- Applied class-based views and templates for frontend rendering</p>
+            <p>- Converted QuerySets to <span class="tech-stack-list">Pandas</span> DataFrames for analytics and chart
+                visualizations</p>
+            <p>- Wrote automated tests for models and views using Django’s <span class="tech-stack-list">TestCase</span>
+            </p>
+            <p>- Deployed the web app on <span class="tech-stack-list">Heroku</span> with <span
+                    class="tech-stack-list">Gunicorn</span> as the WSGI server and <span
+                    class="tech-stack-list">WhiteNoise</span> for static files</p>
+            <p><strong class="bold-title">Challenge:</strong> Structuring models, views, and analytics for scalability
+            </p>
+            <p><strong class="bold-title">Solution:</strong> Leveraged Django’s class-based views, ORM, and clear separation
+                of business logic, forms and templates</p>
+
+            <img src="./img/recipe-app-form.png" alt="Screenshot of the Recipe App form"
+                class="project-image">
+
+
+            <h2>Final Solution</h2>
+            <p>The final application allows users to:</p>
+            <p>- Register and log in securely</p>
+            <p>- Create, view, edit, and delete recipes</p>
+            <p>- Search recipes using multiple filters</p>
+            <p>- Access recipe analytics and visual reports</p>
+            <p>- Manage their profile and password</p>
+
+            <h2>Results & Learnings</h2>
+            <p>- Delivered a complete Django web application deployed to production</p>
+            <p>- Strengthened understanding of MVT architecture and ORM usage</p>
+            <p>- Gained experience with authentication and protected routes</p>
+            <p>- Learned how to combine backend querying with data analysis tools</p>
+
+            <p><strong class="bold-title">Looking back:</strong></p>
+            <p>Starting with a CLI app helped me structure models and logic before moving to Django. I focused on clean code, usability, and reusable components.</p>
+            <p>I grew particularely comfortable with:</p>
+            <p>- Structuring models and class-based views</p>
+            <p>- Implementing authentication and user flows</p>
+            <p>- Designing scalable search functionality</p>
+            <p>The most delicate part was handling data transformations and understanding how output types evolve through different layers of the application. Taking a step back to analyze data flow before implementing features became a key habit that improved both clarity and code quality.</p>
+
+            <p><strong class="bold-title">Next steps:</strong> Improve UI/UX and accessibility, expand the database with recipes' steps</p>
+            <p>
+                <a href="https://github.com/LambicJaune/recipe-app" target="_blank" rel="noopener noreferrer"
+                    class="button">GitHub repository</a>
+                <a href="https://shrouded-plains-12424-d07f179a914b.herokuapp.com" target="_blank" rel="noopener noreferrer"
+                    class="button">Live App</a>
+            </p>
+        </div>
+    </main>
+
+
+    <footer class="page-footer">
+        <p>Find me on</p>
+        <div class="social-media">
+            <a href="https://github.com/LambicJaune/" target="_blank" rel="noopener noreferrer">
+                <img class="social-media-icons" src="img/github-mark.png" alt="github icon">
+            </a>
+            <a href="https://medium.com/@lambicjaune" target="_blank" rel="noopener noreferrer">
+                <img class="social-media-icons" src="img/medium-icon.png" alt="medium icon">
+            </a>
+            <a href="https://x.com/GGiraud90883" target="_blank" rel="noopener noreferrer">
+                <img class="social-media-icons" src="img/x-icon-logo.png" alt="X social media icon">
+            </a>
+            <a href="https://www.linkedin.com/in/gael-giraud/" target="_blank" rel="noopener noreferrer">
+                <img class="social-media-icons" src="img/linkedin-icon.png" alt="linkedin icon">
+            </a>
+        </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navList = document.querySelector('.navigation-list');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Optional: close menu when clicking a link
+        const navLinks = document.querySelectorAll('.navigation-list a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
