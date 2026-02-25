@@ -55,29 +55,84 @@
             </div>
 
             <h2>Objective</h2>
-            <p>To build a chat app for mobile devices using React Native. The app provides users with a chat interface
-                and options to share images taken in real-time or from their gallery, as well as display their location.
-                It supports offline functionality using their cache to display the content from their previous session.
+            <p>
+                Develop a native mobile chat experience with real-time messaging, media sharing, and offline
+                persistence, while learning mobile-specific development patterns and constraints.
             </p>
 
-            <h2>Key features:</h2>
+            <p><strong class="bold-title">Role:</strong> Full-stack developer</p>
+            <p><strong class="bold-title">Duration:</strong> 2 weeks</p>
+            <p><strong class="bold-title">Tech:</strong> React Native, Expo, Cloud Firestore (NoSQL), Firebase, Gifted
+                Chat, AsyncStorage</p>
 
-            <p>- Anonymous login</p>
-            <p>- Personalization of the user name and background color</p>
-            <p>- Real-time messaging</p>
-            <p>- Offline storage allowing access to previous messages when network is out of reach, and direct loading
-                of new messages when network is back</p>
-            <p>- Sending images and location sharing</p>
+            <h2>The Challenges</h2>
+            <p>
+                Handling the mobile ecosystem: managing Expo, React Native, and libraries like Gifted Chat,
+                AsyncStorage, and Expo Image Picker. Ensuring smooth real-time messaging with offline fallback and an
+                intuitive UX.
+            </p>
 
-            <h2>Technologies Used:</h2>
+            <h2>The Process</h2>
 
-            <p>- React Native - A framework for cross-platform mobile development</p>
-            <p>- Expo - A platform simplifying the creation of universal native apps by providing libraries, tools and
-                testing</p>
-            <p>- Cloud Firestore from Firebase - A NoSQL cloud database for storing and syncing data in real-time</p>
-            <p>- Gifted Chat - A library for building chat UI in React Native</p>
-            <p>- AsyncStorage - A simple, unencrypted, asynchronous, persistent, key-value storage system that is global
-                to the app</p>
+            <h3>Backend & Data</h3>
+            <p>- Used <span class="tech-stack-list">Firebase Authentication</span> for anonymous login</p>
+            <p>- Managed real-time chat data with <span class="tech-stack-list">Cloud Firestore</span></p>
+            <p>- Stored images in <span class="tech-stack-list">Firebase Storage</span></p>
+            <p>- Implemented offline persistence with <span class="tech-stack-list">AsyncStorage</span></p>
+            <p>- Monitored network status via <span class="tech-stack-list">NetInfo</span></p>
+            <p><strong class="bold-title">Challenge:</strong> Ensuring seamless offline/online transitions without data
+                loss
+            </p>
+            <p><strong class="bold-title">Solution:</strong> Cached messages locally and automatically synced with
+                Firestore when connectivity returned</p>
+
+            <img src="./img/small_talk_firebase.png" alt="Screenshot of the Small Talk App Firebase setup"
+                class="project-image">
+
+            <h3>Frontend & UX</h3>
+            <p>- Built UI with <span class="tech-stack-list">React Native</span> and <span
+                    class="tech-stack-list">Gifted Chat</span></p>
+            <p>- Implemented image picking and camera capture using <span class="tech-stack-list">Expo Image
+                    Picker</span></p>
+            <p>- Added location sharing via <span class="tech-stack-list">Expo Location</span> and <span
+                    class="tech-stack-list">React Native Maps</span></p>
+            <p>- Customized chat experience with user-selected background color</p>
+
+            <p><strong class="bold-title">Challenge:</strong> Managing Expo and React Native dependencies, especially
+                after SDK updates
+            </p>
+            <p><strong class="bold-title">Solution:</strong> Carefully selected compatible libraries, modularized
+                features, and tested extensively on <span class="tech-stack-list">Expo Go</span> for rapid iteration</p>
+
+            <img src="./img/small_talk_expo.png" alt="Screenshot of Expo Go"
+                class="project-image">
+
+            <h2>The Final Solution</h2>
+
+            <p>A mobile chat app that works offline, supports real-time messaging, media sharing, and location updates,
+                while providing a familiar experience with a responsive and customizable interface.</p>
+
+            <h2>Results & Learnings</h2>
+            <p>- Built a real-time, offline-capable chat app from scratch</p>
+            <p>- Gained expertise in React Native, Expo, and Firebase integration</p>
+            <p>- Learned to handle device APIs, caching, and network state gracefully</p>
+            <p>- Achieved a fully functional, cross-platform experience that feels native</p>
+
+            <h3>Looking Back:</h3>
+            <p>The project strengthened my understanding of mobile-specific challenges versus web apps, especially
+                offline-first architecture and native API integration.
+
+                I was comfortable with the React-based logic and UI design, which made the project approachable. The
+                toughest part was dependency and compatibility management: some libraries had hidden dependencies or
+                broke after SDK updates. I overcame this by carefully choosing libraries, testing extensively, and using
+                Expo Go for fast iteration.
+
+                I also realized the importance of designing features that feel familiar to users — even innovative ideas
+                need intuitive, predictable behavior.
+            </p>
+
+            <h3>Next steps:</h3>
+            <p> Implement push notifications, expand media features to include audio messages</p>
 
             <p>
                 <a href="https://github.com/LambicJaune/small-talk" target="_blank" rel="noopener noreferrer"
